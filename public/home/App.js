@@ -13,7 +13,7 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Pigs... are they ALL evil?</p>
+                    <p>Pigs... are they ALL evil? The TRUTH might SHOCK you!</p>
                 </main>
             </div>
         `;
