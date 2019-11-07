@@ -11,7 +11,7 @@ class PigItem extends Component {
                     <p class="pig-year">${pig.year}</p>
                 </div>
                 <div class="image-container">
-                    <img src="${pig.imgURL}" alt="${pig.name} image" />
+                    <img src="./assets/${pig.image}" alt="${pig.name} image" />
                 </div>
                 <p class="description">${pig.description}</p>
             </li>

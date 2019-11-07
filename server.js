@@ -19,7 +19,6 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static('public'));
 
-
 //API Routes
 app.get('/api/pigs', async (req, res) => {
     try {
