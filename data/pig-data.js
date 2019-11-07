@@ -1,0 +1,82 @@
+module.exports = [
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+},
+{
+    name:
+    year:
+    isEvil:
+    hasTusks:
+    imgURL:
+    description:
+}
+];
