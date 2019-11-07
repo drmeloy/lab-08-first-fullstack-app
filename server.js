@@ -9,25 +9,35 @@ const pg = require('pg');
 
 // Database Client
 const Client = pg.Client;
-const client = new Client(process.env.DATABSE_URL);
+const client = new Client(process.env.DATABASE_URL);
 client.connect();
-// (create and connect using DATABASE_URL)
-
 
 // Application Setup
 const app = express();
-// (add middleware utils: logging, cors, static files from public)
-// app.use(...)
+const PORT = process.env.PORT;
+app.use(morgan('dev'));
+app.use(cors());
+app.use(express.static('public'));
 
 
-// API Routes
+//API Routes
+app.get('/api/pigs', async (req, res) => {
+    try {
+        const result = await client.query(`
+            SELECT * FROM pigs
+        `);
 
-// http method and path...
+        res.json(result.rows);
+    }
+    catch (err) {
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
 
+});
 
 // Start the server
-// (use PORT from .env!)
-const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
     console.log('server running on PORT', PORT);
