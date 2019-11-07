@@ -4,7 +4,7 @@ import Header from '../common/Header.js';
 class App extends Component {
 
     onRender(dom) {
-        const header = new Header();
+        const header = new Header({ title: 'Piggy Home Page' });
         dom.prepend(header.renderDOM());
     }
 

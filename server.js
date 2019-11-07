@@ -1,11 +1,16 @@
 // Load Environment Variables from the .env file
-
+require('dotenv').config();
 
 // Application Dependencies
 const express = require('express');
-// (add cors, pg, and morgan...)
+const cors = require('cors');
+const morgan = require('morgan');
+const pg = require('pg');
 
 // Database Client
+const Client = pg.Client;
+const client = new Client(process.env.DATABSE_URL);
+client.connect();
 // (create and connect using DATABASE_URL)
 
 

@@ -24,8 +24,9 @@ async function run() {
                 name VARCHAR(256) NOT NULL,
                 year INTEGER NOT NULL,
                 is_evil BOOLEAN NOT NULL,
-                walks_on INTEGER NOT NULL,
-                img_url VARCHAR(256) NOT NULL,
+                has_tusks BOOLEAN NOT NULL,
+                walks_on_num_legs INTEGER NOT NULL,
+                image VARCHAR(256) NOT NULL,
                 description VARCHAR(256) NOT NULL
             );
         `);

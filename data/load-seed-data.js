@@ -20,7 +20,7 @@ async function run() {
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
                 return client.query(`
-                    INSERT INTO pigs (name, year, is-evil, has_tusks, walks_on_num_legs, image, description)
+                    INSERT INTO pigs (name, year, is_evil, has_tusks, walks_on_num_legs, image, description)
                     VALUES ($1, $2, $3, $4, $5, $6, $7);
                 `,
                 [pig.name, pig.year, pig.isEvil, pig.hasTusks, pig.walksOnNumLegs, pig.image, pig.description]);
