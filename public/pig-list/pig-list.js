@@ -1,4 +1,4 @@
-import App from './YourResourceApp.js.js';
+import PigListApp from './PigListApp.js';
 
-const app = new App();
+const app = new PigListApp();
 document.body.prepend(app.renderDOM());
