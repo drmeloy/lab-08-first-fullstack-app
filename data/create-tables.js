@@ -18,7 +18,13 @@ async function run() {
         await client.connect();
     
         // run a query to create tables
+
         await client.query(`
+            CREATE TABLE degree_of_evil (
+                id SERIAL PRIMARY KEY NOT NULL,
+                degree VARCHAR(10) NOT NULL,
+            );
+
             CREATE TABLE pigs (
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
@@ -26,6 +32,7 @@ async function run() {
                 is_evil BOOLEAN NOT NULL,
                 has_tusks BOOLEAN NOT NULL,
                 walks_on_num_legs INTEGER NOT NULL,
+                degree_of_evil_id INTEGER NOT NULL REFERENCES degree_of_evil(id),
                 image VARCHAR(256) NOT NULL,
                 description VARCHAR(256) NOT NULL
             );

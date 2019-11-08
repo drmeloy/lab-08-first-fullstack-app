@@ -5,6 +5,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: true, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈😈',
         image: 'bebop.jpeg', 
         description: 'Teenage Mutant Ninja Turtles animated television series'
     },
@@ -14,6 +15,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈😈😈😈',
         image: 'chuckles.jpg', 
         description: 'An anthropomorphic pig and the main antagonist from the series Dave the Barbarian'
     },
@@ -23,6 +25,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: true, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈😈😈',
         image: 'pig-latin.png', 
         description: 'Appeared in the “Obinray” episode of Teen Titans Go!'
     },
@@ -32,6 +35,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈',
         image: 'peppa-pig.png', 
         description: 'Daddy Pig is a loving, hard-working father – but he is subject to abuse from Peppa Pig and family every single episode. SOURCE: https://www.bigissue.com/opinion/christian-oconnell-peppa-pig-evil/'
     },    
@@ -41,6 +45,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈',
         image: 'miss-piggy.jpg', 
         description: 'A Muppet original'
     },
@@ -50,6 +55,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 4, 
+        degreeOfEvil: '😈😈',
         image: 'king-piggy.jpg', 
         description: 'Leader of the bad piggies from the Angry Birds video game'
     },
@@ -59,6 +65,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈😈😈😈',
         image: 'mr-sin.jpg', 
         description: 'Technically a humanoid powered by a pig brain, designed as a toy, it almost causes World War Six in an episode of Dr. Who'
     },
@@ -68,6 +75,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: false, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈',
         image: 'oolong.jpg', 
         description: 'He was expelled from the kindergarten there for kidnapping a teacher. He later attended the Shapeshifting Academy where he always bullied Puar around for lunch money, but was eventually expelled for stealing the teacher’s panties'
     },
@@ -77,6 +85,7 @@ module.exports = [
         isEvil: true, 
         hasTusks: true, 
         walksOnNumLegs: 2, 
+        degreeOfEvil: '😈😈😈',
         image: 'boar.jpg', 
         description: 'One of the villains from Kung-Fu Panda. Boar was the first enemy that the Furious Five face together, and was a factor in the formation of the group'
     }
