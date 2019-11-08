@@ -23,6 +23,7 @@ class PigForm extends Component {
                 image: formData.get('image'),
                 description: formData.get('description')
             };
+            console.log(pig);
 
             try {
                 const saved = await addPig(pig);
@@ -50,7 +51,7 @@ class PigForm extends Component {
                 </p>
                 <p>
                     <label for="year">Year Created</label>
-                    <input id="year" name="year" required type="number" pattern="\d{1,4}">
+                    <input id="year" name="year" required type="number" min="0" pattern="\d{1,4}">
                 </p>
                 <p>
                     <label for="has-tusks">Does Your Pig Have Tusks?</label>
@@ -89,3 +90,5 @@ class PigForm extends Component {
         `;
     }
 }
+
+export default PigForm;

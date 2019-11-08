@@ -4,7 +4,7 @@ import PigForm from './PigForm.js';
 import { getDegrees } from '../services/pig-api.js';
 
 class PigFormApp extends Component {
-    onRender(dom) {
+    async onRender(dom) {
         const header = new Header({ title: 'Add a Pig' });
         dom.prepend(header.renderDOM());
 
