@@ -7,12 +7,10 @@ class PigItem extends Component {
         return /*html*/ `
             <li class="pig-item">
                 <div class="info-container">
-                    <h2>${pig.name}</h2>
-                    <p class="pig-year">${pig.year}</p>
-                    <p class="pig-evil">${pig.degree_of_evil}</p>
+                    <p>${pig.name} - <span class="pig-year">${pig.year}</span> - <span class="pig-evil">Degree of Evil: ${pig.degree_of_evil}</span></p>
                 </div>
                 <div class="image-container">
-                    <img src="./assets/${pig.image}" alt="${pig.name} image" />
+                    <img src="${pig.image.includes('://') ? pig.image : ('./assets/' + pig.image)}" alt="${pig.name} image" />
                 </div>
                 <p class="description">${pig.description}</p>
             </li>

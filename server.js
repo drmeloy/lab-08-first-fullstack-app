@@ -42,6 +42,46 @@ app.get('/api/pigs', async(req, res) => {
 
 });
 
+app.post('/api/pigs', async(req, res) => {
+    const pig = req.body;
+
+    try {
+        const result = await client.query(`
+            INSERT INTO pigs (name, year, is_evil, has_tusks, walks_on_num_legs, degree_of_evil_id, image, description)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+            RETURNING *;
+        `,
+        [pig.name, pig.year, pig.isEvil, pig.hasTusks, pig.walksOnNumLegs, pig.degreeOfEvilId, pig.image, pig.description]
+        );
+
+        res.json(result.rows[0]);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
+app.get('/api/degrees', async (req, res) => {
+    try {
+        const result = await client.query(`
+            SELECT *
+            FROM degree_of_evil
+            ORDER BY degree ASC;
+        `);
+        
+        res.json(result.rows);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 // Start the server
 
 app.listen(PORT, () => {
