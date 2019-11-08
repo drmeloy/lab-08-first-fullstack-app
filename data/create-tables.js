@@ -22,7 +22,7 @@ async function run() {
         await client.query(`
             CREATE TABLE degree_of_evil (
                 id SERIAL PRIMARY KEY NOT NULL,
-                degree VARCHAR(10) NOT NULL,
+                degree VARCHAR(10) NOT NULL
             );
 
             CREATE TABLE pigs (

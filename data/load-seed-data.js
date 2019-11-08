@@ -26,12 +26,14 @@ async function run() {
                 return result.rows[0];
             })
         );
+
+        console.log(pigsDegrees);
     
         // "Promise all" does a parallel execution of async tasks
         await Promise.all(
             // map every item in the array data
             pigs.map(pig => {
-                const deg = pigsDegrees.find(row => row.degree === pigs.degreeOfEvil);
+                const deg = pigsDegrees.find(row => row.degree === pig.degreeOfEvil);
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
                 return client.query(`
