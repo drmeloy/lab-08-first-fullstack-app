@@ -51,7 +51,7 @@ class PigForm extends Component {
                 </p>
                 <p>
                     <label for="year">Year Created</label>
-                    <input id="year" name="year" required type="number" min="0" pattern="\d{1,4}">
+                    <input id="year" name="year" required type="number" min="0">
                 </p>
                 <p>
                     <label for="has-tusks">Does Your Pig Have Tusks?</label><br><br>
