@@ -25,13 +25,13 @@ class PigDetailApp extends Component {
         try {
             const pig = await getPig(id);
             const pigDetail = new PigDetail({ pig });
-            main.appendChild(pigDetail.renderDOM());
+            setTimeout(() => main.appendChild(pigDetail.renderDOM()), 2000);
         }
         catch (err) {
             console.log(err);
         }
         finally {
-            loading.update({ loading: false });
+            setTimeout(() => loading.update({ loading: false }), 2000);
         }
     }
 

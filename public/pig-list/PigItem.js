@@ -13,7 +13,6 @@ class PigItem extends Component {
                     <div class="image-container">
                         <img src="${pig.image.includes('://') ? pig.image : ('./assets/' + pig.image)}" alt="${pig.name} image" />
                     </div>
-                    <p class="description">${pig.description}</p>
                 </li>
             </a>
         `;

@@ -6,6 +6,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const pg = require('pg');
+pg.defaults.ssl = true;
 
 // Database Client
 const Client = pg.Client;
@@ -65,7 +66,7 @@ app.post('/api/pigs', async(req, res) => {
     }
 });
 
-app.get('/api/degrees', async (req, res) => {
+app.get('/api/degrees', async(req, res) => {
     try {
         const result = await client.query(`
             SELECT *
@@ -93,7 +94,7 @@ app.get('/api/pigs/:id', async(req, res) => {
             FROM pigs p
             JOIN degree_of_evil d
             ON p.degree_of_evil_id = d.id
-            WHERE p.id === $1
+            WHERE p.id = $1
         `,
         [id]);
 
@@ -104,8 +105,7 @@ app.get('/api/pigs/:id', async(req, res) => {
             });
         }
         else {
-            res.status(200).json(result);
-            res.json(result.rows[0]);
+            res.status(200).json(result.rows[0]);
         }
     }
     catch (err) {

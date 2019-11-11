@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
 import PigForm from './PigForm.js';
+import Loading from '../common/Loading.js';
 import { getDegrees } from '../services/pig-api.js';
 
 class PigFormApp extends Component {
@@ -10,9 +11,20 @@ class PigFormApp extends Component {
 
         const main = dom.querySelector('main');
 
-        const degrees = await getDegrees();
-        const pigForm = new PigForm({ degrees });
-        main.appendChild(pigForm.renderDOM());
+        const loading = new Loading({ loading: true });
+        main.appendChild(loading.renderDOM());
+
+        try {
+            const degrees = await getDegrees();
+            const pigForm = new PigForm({ degrees });
+            setTimeout(() => main.appendChild(pigForm.renderDOM()), 2000);
+        }
+        catch (err) {
+            console.log('Load pigs failed\n', err);
+        }
+        finally {
+            setTimeout(() => loading.update({ loading: false }), 2000);
+        }
     }
 
     renderHTML() {
