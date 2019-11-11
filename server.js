@@ -83,6 +83,39 @@ app.get('/api/degrees', async (req, res) => {
     }
 });
 
+app.get('/api/pigs/:id', async(req, res) => {
+    try {
+        const id = req.params.id;
+        const result = await client.query(`
+            SELECT
+            p.*,
+            d.degree AS degree_of_evil
+            FROM pigs p
+            JOIN degree_of_evil d
+            ON p.degree_of_evil_id = d.id
+            WHERE p.id === $1
+        `,
+        [id]);
+
+        const pig = result.rows[0];
+        if (!pig) {
+            res.status(404).json({
+                error: `Pig id ${id} does not exist`
+            });
+        }
+        else {
+            res.status(200).json(result);
+            res.json(result.rows[0]);
+        }
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 // Start the server
 
 app.listen(PORT, () => {
