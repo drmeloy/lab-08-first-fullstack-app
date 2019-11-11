@@ -1,9 +1,20 @@
 import Component from '../Component.js';
+import { deletePig } from '../services/pig-api.js';
 
 class PigDetail extends Component {
+    async onRender(dom) {
+        const searchParams = new URLSearchParams(window.location.search);
+        const id = searchParams.get('id');
+        const deleteButton = dom.querySelector('#delete-button');
+        deleteButton.addEventListener('click', async() => {
+            if (confirm('Are you sure you want to delete? This operation cannot be undone.'))
+                await deletePig(id);
+            window.location = './pig-list.html';
+        });
+    }
+    
     renderHTML() {
         const { pig } = this.props;
-        const json = JSON.stringify(pig, true, 4);
         return /*html*/ `
             <div>
                 <div class="info-container">
@@ -15,6 +26,7 @@ class PigDetail extends Component {
                 <p class="description">${pig.description}</p>
                 <p class="num-legs">This piggie walks on: ${pig.walks_on_num_legs} legs.</p>
                 <p class="has-tusks">This piggie ${pig.has_tusks ? 'has' : 'does not have'} tusks.</p>
+                <button id="delete-button">Delete</button>
             </div>
         `;
     }
