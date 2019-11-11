@@ -1,0 +1,33 @@
+.pig-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: darkseagreen;
+    margin: 20px auto;
+    padding: 0 40px 40px 40px;
+    border-radius: 10px;
+    border: 3px solid darkred;
+    width: 550px;
+}
+
+.pig-evil {
+    font-size: .8em;
+}
+
+.info-container {
+    padding: 20px;
+    font-size: 1.4em;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.pig-name {
+    font-weight: bold;
+}
+
+img {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    width: 450px;
+}

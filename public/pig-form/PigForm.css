@@ -1,0 +1,17 @@
+.pig-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    height: 30vw;
+    padding: 30px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+
+}

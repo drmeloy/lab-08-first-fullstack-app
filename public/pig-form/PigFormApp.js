@@ -17,7 +17,7 @@ class PigFormApp extends Component {
         try {
             const degrees = await getDegrees();
             const pigForm = new PigForm({ degrees });
-            setTimeout(() => main.appendChild(pigForm.renderDOM()), 2000);
+            setTimeout(() => main.appendChild(pigForm.renderDOM()), 1500);
         }
         catch (err) {
             console.log('Load pigs failed\n', err);
@@ -31,7 +31,6 @@ class PigFormApp extends Component {
         return /*html*/ `
             <div>
                 <main>
-                    <p>Pig Form Page</p>
                 </main>
             </div>
         `;

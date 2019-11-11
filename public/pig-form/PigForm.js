@@ -54,18 +54,18 @@ class PigForm extends Component {
                     <input id="year" name="year" required type="number" min="0" pattern="\d{1,4}">
                 </p>
                 <p>
-                    <label for="has-tusks">Does Your Pig Have Tusks?</label>
-                    <input type="radio" name="has-tusks" value="true" required>Yes<br>
+                    <label for="has-tusks">Does Your Pig Have Tusks?</label><br><br>
+                    <input type="radio" name="has-tusks" value="true" required>Yes
                     <input type="radio" name="has-tusks" value="false">No
                 </p>
                 <p>
-                    <label for="walks-on-num-legs">How Many Legs Does Your Pig Walk On?</label>
+                    <label for="walks-on-num-legs">How Many Legs Does Your Pig Walk On?</label><br><br>
                     <input id="walks-on-num-legs" name="walks-on-num-legs" type="range" min="1" max="4" value="2" required>
                     <span id="num-legs-display"></span>
                 </p>
                 <p>
-                    <label for="is-evil">Is Your Pig Evil?</label>
-                    <input type="radio" name="is-evil" value="true" required>Yes<br>
+                    <label for="is-evil">Is Your Pig Evil?</label><br><br>
+                    <input type="radio" name="is-evil" value="true" required>Yes
                     <input type="radio" name="is-evil" value="true">Yes<br>
                 </p>
                 <p>
@@ -80,8 +80,8 @@ class PigForm extends Component {
                     <input id="image" name="image" type="url" required>
                 </p>
                 <p>
-                    <label for="description">Description</label>
-                    <input id="description" name="description" type="text-area" required placeholder="Describe your pig here">
+                    <label for="description">Description</label><br>
+                    <textarea id="description" name="description" type="text-area" rows="4" cols="50" required placeholder="Describe your pig here"></textarea>
                 </p>
                 <p>
                     <button>Add This Pig</button>

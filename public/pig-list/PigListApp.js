@@ -18,7 +18,7 @@ class PigListApp extends Component {
 
         try {
             getPigs().then(pigs => {
-                setTimeout(() => list.update({ pigs }), 2000);
+                setTimeout(() => list.update({ pigs }), 1500);
             });
         }
         catch (err) {
