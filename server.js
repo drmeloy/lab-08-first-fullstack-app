@@ -119,7 +119,7 @@ app.get('/api/pigs/:id', async(req, res) => {
 app.delete('/api/pigs/:id', async(req, res) => {
     try {
         const id = req.params.id;
-        const result = await client.query(`
+        await client.query(`
             DELETE FROM pigs
             WHERE pigs.id = $1
         `,
