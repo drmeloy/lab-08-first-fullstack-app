@@ -116,6 +116,23 @@ app.get('/api/pigs/:id', async(req, res) => {
     }
 });
 
+app.delete('/api/pigs/:id', async(req, res) => {
+    try {
+        const id = req.params.id;
+        const result = await client.query(`
+            DELETE FROM pigs
+            WHERE pigs.id = $1
+        `,
+        [id]);
+        res.status(200).json('"delete successful"');
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
 // Start the server
 
 app.listen(PORT, () => {

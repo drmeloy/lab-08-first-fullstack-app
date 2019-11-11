@@ -38,3 +38,17 @@ export const addPig = async(pig) => {
     const data = await response.json();
     return data;
 };
+
+export const deletePig = async(id) => {
+    const url = `${URL}/pigs/${id}`;
+
+    const response = await fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+
+    const data = await response.json();
+    return data;
+};
