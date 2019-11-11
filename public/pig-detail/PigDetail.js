@@ -16,15 +16,16 @@ class PigDetail extends Component {
     renderHTML() {
         const { pig } = this.props;
         return /*html*/ `
-            <div>
+            <div class="pig-item">
                 <div class="info-container">
-                    <p>${pig.name} - <span class="pig-year">${pig.year}</span> - <span class="pig-evil">Degree of Evil: ${pig.degree_of_evil}</span></p>
+                    <p class="pig-name">${pig.name} - <span class="pig-year">${pig.year}</span></p>
+                    <p><span class="pig-evil">Degree of Evil: ${pig.degree_of_evil}</span></p>
                 </div>
                 <div class="image-container">
                     <img src="${pig.image.includes('://') ? pig.image : ('./assets/' + pig.image)}" alt="${pig.name} image" />
-                </div>
-                <p class="description">${pig.description}</p>
-                <p class="num-legs">This piggie walks on: ${pig.walks_on_num_legs} legs.</p>
+                </div><br>
+                <p class="description">${pig.description}</p><br>
+                <p class="num-legs">This piggie walks on: ${pig.walks_on_num_legs} legs.</p><br>
                 <p class="has-tusks">This piggie ${pig.has_tusks ? 'has' : 'does not have'} tusks.</p>
                 <button id="delete-button">Delete</button>
             </div>
