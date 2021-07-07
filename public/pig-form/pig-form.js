@@ -1,4 +1,4 @@
-import App from './YourResourceFormApp.js';
+import PigFormApp from './PigFormApp.js';
 
-const app = new App();
+const app = new PigFormApp();
 document.body.prepend(app.renderDOM());

@@ -4,7 +4,7 @@ import Header from '../common/Header.js';
 class App extends Component {
 
     onRender(dom) {
-        const header = new Header();
+        const header = new Header({ title: 'Piggy Home Page' });
         dom.prepend(header.renderDOM());
     }
 
@@ -13,7 +13,7 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Main App Page</p>
+                    <p>Pigs... are they ALL evil? The TRUTH might SHOCK you!</p>
                 </main>
             </div>
         `;
